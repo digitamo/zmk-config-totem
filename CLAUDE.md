@@ -58,10 +58,9 @@ The keyboard uses a 4x10 matrix defined in [totem.dtsi](config/boards/shields/to
 
 ### Custom Behaviors
 
-- **Home Row Mods**: 125ms tapping term, tap-preferred, 125ms quick-tap
+- **Home Row Mods**: 170ms tapping term, tap-preferred, 100ms quick-tap
 - **Combos**:
   - Keys 0+1: ESC (50ms timeout)
-  - Keys 3+6: Caps Word (50ms timeout)
   - Keys 11+12+13: Toggle TVP1 layer (100ms timeout)
 - **Macros**: `gif` macro types "#gif"
 
