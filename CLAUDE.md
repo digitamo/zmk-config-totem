@@ -42,7 +42,7 @@ The compiled firmware artifacts will be available under Actions → firmware.zip
 
 The keymap in [config/totem.keymap](config/totem.keymap) defines 6 layers:
 
-1. **BASE (0)**: QWERTY layout with home row mods (GUI/ALT/CTRL/SHIFT on left, mirrored on right)
+1. **BASE (0)**: COLEMAK-DH layout with home row mods (GACS on left, SCAG on right)
 2. **NAV (1)**: Navigation keys, arrow keys, brackets, and numpad
 3. **SYM (2)**: Symbols, international characters (German Ä/Ö/Ü/ß), media controls, currency symbols
 4. **ADJ (3)**: System functions (reset, bootloader, Bluetooth controls), F-keys
@@ -58,11 +58,11 @@ The keyboard uses a 4x10 matrix defined in [totem.dtsi](config/boards/shields/to
 
 ### Custom Behaviors
 
-- **Home Row Mods**: 170ms tapping term, tap-preferred flavor, 175ms quick-tap, 125ms require-prior-idle
+- **Home Row Mods**: 125ms tapping term, tap-preferred, 125ms quick-tap
 - **Combos**:
   - Keys 0+1: ESC (50ms timeout)
+  - Keys 3+6: Caps Word (50ms timeout)
   - Keys 11+12+13: Toggle TVP1 layer (100ms timeout)
-  - Keys 13+16: CAPS_WORD (50ms timeout)
 - **Macros**: `gif` macro types "#gif"
 
 ### West Configuration
