@@ -31,12 +31,11 @@ The compiled firmware artifacts will be available under Actions → firmware.zip
 ### Repository Structure
 
 - **config/**: Main firmware configuration directory (referenced in [west.yml](config/west.yml))
-  - [totem.keymap](config/totem.keymap): Primary keymap definition
+  - [totem.keymap](config/totem.keymap): Primary keymap definition (this is the only keymap file used by ZMK)
   - [totem.conf](config/totem.conf): Global configuration options
   - **boards/shields/totem/**: Shield-specific hardware definitions
     - [totem.dtsi](config/boards/shields/totem/totem.dtsi): Shared device tree definitions (matrix transform, kscan)
     - [totem_left.overlay](config/boards/shields/totem/totem_left.overlay) / [totem_right.overlay](config/boards/shields/totem/totem_right.overlay): Side-specific hardware configs
-    - [totem.keymap](config/boards/shields/totem/totem.keymap): Duplicate keymap (keep in sync with config/totem.keymap)
 
 ### Keymap Layers
 
@@ -58,9 +57,10 @@ The keyboard uses a 4x10 matrix defined in [totem.dtsi](config/boards/shields/to
 
 ### Custom Behaviors
 
-- **Home Row Mods**: 170ms tapping term, tap-preferred, 100ms quick-tap
+- **Home Row Mods**: 200ms tapping term, tap-preferred, 125ms quick-tap
 - **Combos**:
   - Keys 0+1: ESC (50ms timeout)
+  - Keys 13+16: Caps Word (50ms timeout) - activates when pressing F and J home keys together
   - Keys 11+12+13: Toggle TVP1 layer (100ms timeout)
 - **Macros**: `gif` macro types "#gif"
 
@@ -70,6 +70,6 @@ The keyboard uses a 4x10 matrix defined in [totem.dtsi](config/boards/shields/to
 
 ## Important Notes
 
-- Keep both keymap files synchronized: [config/totem.keymap](config/totem.keymap) and [config/boards/shields/totem/totem.keymap](config/boards/shields/totem/totem.keymap)
-- The repository currently has BT_CLR disabled (see recent commit) with debugging enabled
+- The keymap configuration is in [config/totem.keymap](config/totem.keymap) - this is the only keymap file used by ZMK
 - Uses settings_reset shield for troubleshooting Bluetooth issues
+- Home row mods timing is optimized for macOS Bluetooth connectivity (200ms tapping term)
