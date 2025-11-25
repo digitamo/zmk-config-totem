@@ -22,11 +22,10 @@
 #define ADJ  3
 
 &mt {
-  quick-tap-ms = <175>;
+  quick-tap-ms = <125>;
   global-quick-tap;
-  flavor = "balanced";
-  tapping-term-ms = <170>;
-  require-prior-idle-ms = <125>;
+  flavor = "tap-preferred";
+  tapping-term-ms = <125>;
 };
 
 / {
